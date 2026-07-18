@@ -1,0 +1,43 @@
+package top.stev51.stevs_halloween_mod;
+
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import org.slf4j.Logger;
+
+import com.mojang.logging.LogUtils;
+
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+
+@Mod(HalloweenMod.MOD_ID)
+public class HalloweenMod {
+
+    public static final String MOD_ID = "stevs_halloween_mod";
+    public static final Logger LOGGER = LogUtils.getLogger();
+
+    public HalloweenMod(IEventBus modEventBus, ModContainer modContainer) {
+        modEventBus.addListener(this::commonSetup);
+        NeoForge.EVENT_BUS.register(this);
+        modEventBus.addListener(this::addCreative);
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+    }
+
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        ;
+    }
+
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        ;
+    }
+
+    @SubscribeEvent
+    public void onServerStarting(ServerStartingEvent event) {
+        ;
+    }
+
+}

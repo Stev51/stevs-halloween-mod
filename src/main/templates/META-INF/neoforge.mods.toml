@@ -39,14 +39,15 @@ displayName="${mod_name}" #mandatory
 #logoFile="examplemod.png" #optional
 
 # A text field displayed in the mod UI
-#credits="" #optional
+credits="Kaupenjoe's modding tutorials" #optional
 
 # The authors of the mod, displayed in the mod UI (optional)
-#authors=""
+authors="Stev51"
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Example mod description.
+Happy Halloween!!!
+This mod adds a bit of spooky spirit to Minecraft with autumn colors, spooky mobs, festive food items, and more!
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
