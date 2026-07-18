@@ -23,8 +23,8 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.stevs_halloween_mod.stevs_halloween_mod_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
-                        // Placeholder entry
-                        output.accept(Items.JACK_O_LANTERN);
+                        // Food
+                        output.accept(ModItems.APPLE_PIE);
 
                     })
                     .build()

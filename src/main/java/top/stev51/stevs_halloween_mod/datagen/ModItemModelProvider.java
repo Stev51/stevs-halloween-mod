@@ -4,6 +4,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import top.stev51.stevs_halloween_mod.HalloweenMod;
+import top.stev51.stevs_halloween_mod.item.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
 
@@ -14,7 +15,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
 
-        ;
+        basicItem(ModItems.APPLE_PIE.get());
 
     }
 

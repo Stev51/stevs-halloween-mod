@@ -13,7 +13,9 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import top.stev51.stevs_halloween_mod.block.ModBlocks;
 import top.stev51.stevs_halloween_mod.item.ModCreativeModeTabs;
+import top.stev51.stevs_halloween_mod.item.ModItems;
 
 @Mod(HalloweenMod.MOD_ID)
 public class HalloweenMod {
@@ -27,6 +29,8 @@ public class HalloweenMod {
         NeoForge.EVENT_BUS.register(this);
 
         ModCreativeModeTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
