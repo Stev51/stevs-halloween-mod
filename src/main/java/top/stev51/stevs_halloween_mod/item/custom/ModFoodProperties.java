@@ -7,7 +7,7 @@ public class ModFoodProperties {
     // Same as vanilla Pumpkin Pie
     public static final FoodProperties APPLE_PIE = new FoodProperties.Builder()
             .nutrition(8)
-            .saturationModifier(0.3F)
+            .saturationModifier(0.3f)
             .build();
 
 }
