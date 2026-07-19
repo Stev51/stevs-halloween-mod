@@ -1,6 +1,10 @@
 package top.stev51.stevs_halloween_mod;
 
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
@@ -14,6 +18,9 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import top.stev51.stevs_halloween_mod.block.ModBlocks;
+import top.stev51.stevs_halloween_mod.entity.ModEntities;
+import top.stev51.stevs_halloween_mod.entity.client.GhostRenderer;
+import top.stev51.stevs_halloween_mod.entity.client.VampireRenderer;
 import top.stev51.stevs_halloween_mod.item.ModCreativeModeTabs;
 import top.stev51.stevs_halloween_mod.item.ModItems;
 
@@ -31,6 +38,7 @@ public class HalloweenMod {
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -48,6 +56,19 @@ public class HalloweenMod {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         ;
+    }
+
+    @EventBusSubscriber(modid=MOD_ID, value=Dist.CLIENT)
+    public static class ClientModEvents {
+
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+
+            EntityRenderers.register(ModEntities.GHOST.get(), GhostRenderer::new);
+            EntityRenderers.register(ModEntities.VAMPIRE.get(), VampireRenderer::new);
+
+        }
+
     }
 
 }

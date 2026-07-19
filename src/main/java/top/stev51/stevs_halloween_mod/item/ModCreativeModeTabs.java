@@ -26,6 +26,10 @@ public class ModCreativeModeTabs {
                         // Food
                         output.accept(ModItems.APPLE_PIE);
 
+                        // Spawn Eggs
+                        output.accept(ModItems.GHOST_SPAWN_EGG);
+                        output.accept(ModItems.VAMPIRE_SPAWN_EGG);
+
                     })
                     .build()
     );
