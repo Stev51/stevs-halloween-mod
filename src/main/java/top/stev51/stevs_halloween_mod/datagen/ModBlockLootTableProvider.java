@@ -20,7 +20,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
 
-        ;
+        dropSelf(ModBlocks.APPLE_SAPLING.get());
+
+        add(ModBlocks.APPLE_LEAVES.get(),
+                block -> createOakLeavesDrops(block, ModBlocks.APPLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)
+        );
 
     }
 

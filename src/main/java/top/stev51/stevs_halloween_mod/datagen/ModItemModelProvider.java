@@ -1,9 +1,14 @@
 package top.stev51.stevs_halloween_mod.datagen;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import top.stev51.stevs_halloween_mod.HalloweenMod;
+import top.stev51.stevs_halloween_mod.block.ModBlocks;
 import top.stev51.stevs_halloween_mod.item.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
@@ -15,6 +20,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
 
+        saplingItem(ModBlocks.APPLE_SAPLING);
+
         withExistingParent(ModItems.GHOST_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.VAMPIRE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.WEREWOLF_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
@@ -22,6 +29,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.MUMMY_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.DEVIL_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
+    }
+
+    private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
+        return withExistingParent(item.getId().getPath(), ResourceLocation.parse("item/generated"))
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "block/" + item.getId().getPath()));
     }
 
 }

@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.stev51.stevs_halloween_mod.HalloweenMod;
+import top.stev51.stevs_halloween_mod.block.ModBlocks;
 
 import java.util.function.Supplier;
 
@@ -22,6 +23,10 @@ public class ModCreativeModeTabs {
                     .icon(() -> new ItemStack(Blocks.JACK_O_LANTERN))
                     .title(Component.translatable("creativetab.stevs_halloween_mod.stevs_halloween_mod_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+
+                        // Blocks
+                        output.accept(ModBlocks.APPLE_LEAVES);
+                        output.accept(ModBlocks.APPLE_SAPLING);
 
                         // Spawn Eggs
                         output.accept(ModItems.DEVIL_SPAWN_EGG);
