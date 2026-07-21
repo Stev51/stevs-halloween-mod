@@ -1,0 +1,55 @@
+BEFORE RELEASE
+- Crops
+    - Apple Tree
+- Food
+    - Non-craftable candy
+        - Candy Corn
+        - Peanut Butter Cup
+        - Gumdrop
+        - Lollipop
+        - Hard Candy
+    - Craftable candy
+        - Sugar Cookie (wheat + sugar)
+        - Chocolate Bar (cocoa + sugar + milk)
+        - Caramel (cook sugar)
+        - Caramel Apple (stick + apple + caramel)
+        - Candy Apple (stick + apple + sugar)
+    - Misc
+        - Apple Cider (apple + bottles)
+        - Toasted Pumpkin Seeds (cook pumpkin seeds)
+- Candy drop loot tables
+- Pumpkin seeds drop from grass
+- Title screen background
+
+AFTER RELEASE
+- Crops
+    - Corn
+    - Yam
+- Food
+    - Corn on the Cob
+    - Popcorn
+    - Baked Sweet Potato
+- Mobs
+    - Goblin
+- Costumes
+    - Mobs
+        - Zombie
+        - Skeleton
+        - Witch
+        - Ghost
+        - Vampire
+        - Werewolf
+        - Monster
+        - Mummy
+        - Devil
+    - Animals
+        - Black Cat
+        - Bat
+        - Spider
+    - Misc
+        - Pirate
+        - Scarecrow
+        - Pumpkin
+        - Clown
+- Splash texts?
+- Music discs?

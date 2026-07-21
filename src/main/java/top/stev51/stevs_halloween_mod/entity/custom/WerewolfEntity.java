@@ -31,7 +31,7 @@ public class WerewolfEntity extends BaseHalloweenMonster {
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
-        return SoundEvents.WOLF_HURT;
+        return SoundEvents.WOLF_GROWL;
     }
 
     @Override
