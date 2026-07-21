@@ -48,4 +48,5 @@ AFTER RELEASE
         - Scarecrow
         - Pumpkin
         - Clown
+        - Cowboy
 - Music discs?
