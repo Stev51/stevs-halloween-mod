@@ -3,7 +3,6 @@ BEFORE RELEASE
     - Apple Tree
 - Food
     - Non-craftable candy
-        - Candy Corn
         - Peanut Butter Cup
         - Gumdrop
         - Lollipop
@@ -15,19 +14,17 @@ BEFORE RELEASE
         - Caramel Apple (stick + apple + caramel)
         - Candy Apple (stick + apple + sugar)
     - Misc
-        - Apple Cider (apple + bottles)
         - Toasted Pumpkin Seeds (cook pumpkin seeds)
 - Candy drop loot tables
 - Pumpkin seeds drop from grass
 - Title screen background
+- Possibly redo foliage colors based on vanilla
+- REMOVE APPLE PIE
 
 AFTER RELEASE
 - Crops
-    - Corn
     - Yam
 - Food
-    - Corn on the Cob
-    - Popcorn
     - Baked Sweet Potato
 - Mobs
     - Goblin
