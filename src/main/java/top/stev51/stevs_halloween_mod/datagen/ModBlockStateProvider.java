@@ -5,11 +5,13 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import top.stev51.stevs_halloween_mod.HalloweenMod;
 import top.stev51.stevs_halloween_mod.block.ModBlocks;
+import top.stev51.stevs_halloween_mod.block.custom.AppleLeavesBlock;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -20,8 +22,38 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-        leavesBlock(ModBlocks.APPLE_LEAVES);
         saplingBlock(ModBlocks.APPLE_SAPLING);
+
+        getVariantBuilder(ModBlocks.APPLE_LEAVES.get()).forAllStates(state -> {
+
+            if (state.getValue(AppleLeavesBlock.APPLE_GROWTH)) {
+
+                return new ConfiguredModel[]{new ConfiguredModel(models().singleTexture(
+                        "apple_leaves_with_apples",
+                        ResourceLocation.parse("minecraft:block/leaves"),
+                        "all",
+                        ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "block/apple_leaves_with_apples")
+                ).renderType("cutout"))};
+
+            } else {
+
+                return new ConfiguredModel[]{new ConfiguredModel(models().singleTexture(
+                        "apple_leaves_without_apples",
+                        ResourceLocation.parse("minecraft:block/leaves"),
+                        "all",
+                        ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "block/apple_leaves_without_apples")
+                ).renderType("cutout"))};
+
+            }
+
+        });
+
+        simpleBlockItem(ModBlocks.APPLE_LEAVES.get(), models().singleTexture(
+                "apple_leaves_without_apples",
+                ResourceLocation.parse("minecraft:block/leaves"),
+                "all",
+                ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "block/apple_leaves_without_apples")
+        ).renderType("cutout"));
 
     }
 

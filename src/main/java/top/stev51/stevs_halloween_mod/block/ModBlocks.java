@@ -15,6 +15,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.stev51.stevs_halloween_mod.HalloweenMod;
+import top.stev51.stevs_halloween_mod.block.custom.AppleLeavesBlock;
 import top.stev51.stevs_halloween_mod.item.ModItems;
 import top.stev51.stevs_halloween_mod.worldgen.tree.ModTreeGrowers;
 
@@ -27,24 +28,7 @@ public class ModBlocks {
 
 
     public static final DeferredBlock<Block> APPLE_LEAVES = registerBlock("apple_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)) {
-
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return true;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 60;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 30;
-                }
-
-            }
+            () -> new AppleLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES))
     );
 
     public static final DeferredBlock<Block> APPLE_SAPLING = registerBlock("apple_sapling",
