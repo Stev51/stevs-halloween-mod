@@ -20,8 +20,9 @@ public class GhostEntity extends BaseHalloweenMonster {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
-                .add(Attributes.MOVEMENT_SPEED, 0.25d)
-                .add(Attributes.ATTACK_DAMAGE, 3.0d);
+                .add(Attributes.MAX_HEALTH, 14)
+                .add(Attributes.MOVEMENT_SPEED, 0.35d)
+                .add(Attributes.ATTACK_DAMAGE, 2.0d);
     }
 
     @Override

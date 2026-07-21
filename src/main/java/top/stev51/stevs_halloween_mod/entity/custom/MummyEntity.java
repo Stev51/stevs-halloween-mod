@@ -20,7 +20,8 @@ public class MummyEntity extends BaseHalloweenMonster {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
-                .add(Attributes.MOVEMENT_SPEED, 0.25d)
+                .add(Attributes.MAX_HEALTH, 20)
+                .add(Attributes.MOVEMENT_SPEED, 0.23d)
                 .add(Attributes.ATTACK_DAMAGE, 3.0d);
     }
 

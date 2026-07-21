@@ -91,57 +91,57 @@ public class ModBiomeModifiers {
 
         context.register(SPAWN_GHOST, new BiomeModifiers
                 .AddSpawnsBiomeModifier(biomes_set, List.of(
-                        new MobSpawnSettings.SpawnerData(ModEntities.GHOST.get(), 80, 1, 4)))
+                        new MobSpawnSettings.SpawnerData(ModEntities.GHOST.get(), 80, 2, 4)))
         );
 
         context.register(SPAWN_VAMPIRE, new BiomeModifiers
                 .AddSpawnsBiomeModifier(biomes_set, List.of(
-                        new MobSpawnSettings.SpawnerData(ModEntities.VAMPIRE.get(), 80, 1, 1)))
+                        new MobSpawnSettings.SpawnerData(ModEntities.VAMPIRE.get(), 50, 1, 1)))
         );
 
         context.register(SPAWN_WEREWOLF, new BiomeModifiers
                 .AddSpawnsBiomeModifier(biomes_set, List.of(
-                        new MobSpawnSettings.SpawnerData(ModEntities.WEREWOLF.get(), 80, 1, 4)))
+                        new MobSpawnSettings.SpawnerData(ModEntities.WEREWOLF.get(), 80, 2, 4)))
         );
 
         context.register(SPAWN_FRANKENSTEIN, new BiomeModifiers
                 .AddSpawnsBiomeModifier(biomes_set, List.of(
-                        new MobSpawnSettings.SpawnerData(ModEntities.FRANKENSTEIN.get(), 80, 1, 1)))
+                        new MobSpawnSettings.SpawnerData(ModEntities.FRANKENSTEIN.get(), 50, 1, 1)))
         );
 
         context.register(SPAWN_MUMMY, new BiomeModifiers
                 .AddSpawnsBiomeModifier(biomes_set, List.of(
-                        new MobSpawnSettings.SpawnerData(ModEntities.MUMMY.get(), 80, 1, 4)))
+                        new MobSpawnSettings.SpawnerData(ModEntities.MUMMY.get(), 80, 2, 4)))
         );
 
         context.register(SPAWN_DEVIL, new BiomeModifiers
                 .AddSpawnsBiomeModifier(biomes_set, List.of(
-                        new MobSpawnSettings.SpawnerData(ModEntities.DEVIL.get(), 80, 1, 4)))
+                        new MobSpawnSettings.SpawnerData(ModEntities.DEVIL.get(), 60, 3, 5)))
         );
 
         context.register(SPAWN_DEVIL_BASALT_DELTAS, new BiomeModifiers
                 .AddSpawnsBiomeModifier(HolderSet.direct(biomes.getOrThrow(Biomes.BASALT_DELTAS)), List.of(
-                    new MobSpawnSettings.SpawnerData(ModEntities.DEVIL.get(), 40, 1, 4)))
+                    new MobSpawnSettings.SpawnerData(ModEntities.DEVIL.get(), 40, 3, 5)))
         );
 
         context.register(SPAWN_DEVIL_CRIMSON_FOREST, new BiomeModifiers
                 .AddSpawnsBiomeModifier(HolderSet.direct(biomes.getOrThrow(Biomes.CRIMSON_FOREST)), List.of(
-                    new MobSpawnSettings.SpawnerData(ModEntities.DEVIL.get(), 5, 1, 4)))
+                    new MobSpawnSettings.SpawnerData(ModEntities.DEVIL.get(), 5, 3, 5)))
         );
 
         context.register(SPAWN_DEVIL_NETHER_WASTES, new BiomeModifiers
                 .AddSpawnsBiomeModifier(HolderSet.direct(biomes.getOrThrow(Biomes.NETHER_WASTES)), List.of(
-                    new MobSpawnSettings.SpawnerData(ModEntities.DEVIL.get(), 50, 1, 4)))
+                    new MobSpawnSettings.SpawnerData(ModEntities.DEVIL.get(), 50, 3, 5)))
         );
 
         context.register(SPAWN_DEVIL_SOUL_SAND_VALLEY, new BiomeModifiers
                 .AddSpawnsBiomeModifier(HolderSet.direct(biomes.getOrThrow(Biomes.SOUL_SAND_VALLEY)), List.of(
-                    new MobSpawnSettings.SpawnerData(ModEntities.DEVIL.get(), 5, 1, 4)))
+                    new MobSpawnSettings.SpawnerData(ModEntities.DEVIL.get(), 5, 3, 5)))
         );
 
         context.register(SPAWN_DEVIL_WARPED_FOREST, new BiomeModifiers
                 .AddSpawnsBiomeModifier(HolderSet.direct(biomes.getOrThrow(Biomes.WARPED_FOREST)), List.of(
-                    new MobSpawnSettings.SpawnerData(ModEntities.DEVIL.get(), 1, 1, 4)))
+                    new MobSpawnSettings.SpawnerData(ModEntities.DEVIL.get(), 1, 3, 5)))
         );
 
     }

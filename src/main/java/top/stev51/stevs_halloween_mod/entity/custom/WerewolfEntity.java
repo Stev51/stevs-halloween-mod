@@ -20,8 +20,9 @@ public class WerewolfEntity extends BaseHalloweenMonster {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
-                .add(Attributes.MOVEMENT_SPEED, 0.25d)
-                .add(Attributes.ATTACK_DAMAGE, 3.0d);
+                .add(Attributes.MAX_HEALTH, 26)
+                .add(Attributes.MOVEMENT_SPEED, 0.3d)
+                .add(Attributes.ATTACK_DAMAGE, 4.0d);
     }
 
     @Override
