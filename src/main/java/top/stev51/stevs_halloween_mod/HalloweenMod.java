@@ -19,8 +19,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import top.stev51.stevs_halloween_mod.block.ModBlocks;
 import top.stev51.stevs_halloween_mod.entity.ModEntities;
-import top.stev51.stevs_halloween_mod.entity.client.GhostRenderer;
-import top.stev51.stevs_halloween_mod.entity.client.VampireRenderer;
+import top.stev51.stevs_halloween_mod.entity.client.*;
 import top.stev51.stevs_halloween_mod.item.ModCreativeModeTabs;
 import top.stev51.stevs_halloween_mod.item.ModItems;
 
@@ -66,6 +65,10 @@ public class HalloweenMod {
 
             EntityRenderers.register(ModEntities.GHOST.get(), GhostRenderer::new);
             EntityRenderers.register(ModEntities.VAMPIRE.get(), VampireRenderer::new);
+            EntityRenderers.register(ModEntities.WEREWOLF.get(), WerewolfRenderer::new);
+            EntityRenderers.register(ModEntities.FRANKENSTEIN.get(), FrankensteinRenderer::new);
+            EntityRenderers.register(ModEntities.MUMMY.get(), MummyRenderer::new);
+            EntityRenderers.register(ModEntities.DEVIL.get(), DevilRenderer::new);
 
         }
 

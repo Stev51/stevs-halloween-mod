@@ -6,8 +6,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.stev51.stevs_halloween_mod.HalloweenMod;
-import top.stev51.stevs_halloween_mod.entity.custom.GhostEntity;
-import top.stev51.stevs_halloween_mod.entity.custom.VampireEntity;
+import top.stev51.stevs_halloween_mod.entity.custom.*;
 
 import java.util.function.Supplier;
 
@@ -27,6 +26,30 @@ public class ModEntities {
             () -> EntityType.Builder.of(VampireEntity::new, MobCategory.MONSTER)
                     .sized(0.6f, 1.8f)
                     .build("vampire")
+    );
+
+    public static final Supplier<EntityType<WerewolfEntity>> WEREWOLF = ENTITY_TYPES.register("werewolf",
+            () -> EntityType.Builder.of(WerewolfEntity::new, MobCategory.MONSTER)
+                    .sized(0.6f, 1.8f)
+                    .build("werewolf")
+    );
+
+    public static final Supplier<EntityType<FrankensteinEntity>> FRANKENSTEIN = ENTITY_TYPES.register("frankenstein",
+            () -> EntityType.Builder.of(FrankensteinEntity::new, MobCategory.MONSTER)
+                    .sized(0.6f, 1.8f)
+                    .build("frankenstein")
+    );
+
+    public static final Supplier<EntityType<MummyEntity>> MUMMY = ENTITY_TYPES.register("mummy",
+            () -> EntityType.Builder.of(MummyEntity::new, MobCategory.MONSTER)
+                    .sized(0.6f, 1.8f)
+                    .build("mummy")
+    );
+
+    public static final Supplier<EntityType<DevilEntity>> DEVIL = ENTITY_TYPES.register("devil",
+            () -> EntityType.Builder.of(DevilEntity::new, MobCategory.MONSTER)
+                    .sized(0.6f, 1.8f)
+                    .build("devil")
     );
 
 

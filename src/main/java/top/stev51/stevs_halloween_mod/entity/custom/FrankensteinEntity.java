@@ -11,11 +11,11 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class GhostEntity extends BaseHalloweenMonster {
+public class FrankensteinEntity extends BaseHalloweenMonster {
 
-    public GhostEntity(EntityType<? extends BaseHalloweenMonster> entityType, Level level) {
+    public FrankensteinEntity(EntityType<? extends BaseHalloweenMonster> entityType, Level level) {
         super(entityType, level,
-                false, false);
+                false, true);
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -26,17 +26,17 @@ public class GhostEntity extends BaseHalloweenMonster {
 
     @Override
     protected @Nullable SoundEvent getAmbientSound() {
-        return SoundEvents.PHANTOM_AMBIENT;
+        return SoundEvents.ZOMBIE_VILLAGER_AMBIENT;
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
-        return SoundEvents.PHANTOM_HURT;
+        return SoundEvents.ZOMBIE_VILLAGER_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.PHANTOM_DEATH;
+        return SoundEvents.ZOMBIE_VILLAGER_DEATH;
     }
 
 }

@@ -11,9 +11,9 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class GhostEntity extends BaseHalloweenMonster {
+public class DevilEntity extends BaseHalloweenMonster {
 
-    public GhostEntity(EntityType<? extends BaseHalloweenMonster> entityType, Level level) {
+    public DevilEntity(EntityType<? extends BaseHalloweenMonster> entityType, Level level) {
         super(entityType, level,
                 false, false);
     }
@@ -25,18 +25,27 @@ public class GhostEntity extends BaseHalloweenMonster {
     }
 
     @Override
+    public boolean hurt(DamageSource source, float amount) {
+        if (!source.is(DamageTypeTags.IS_FIRE)) {
+            return super.hurt(source, amount);
+        } else {
+            return false;
+        }
+    }
+
+    @Override
     protected @Nullable SoundEvent getAmbientSound() {
-        return SoundEvents.PHANTOM_AMBIENT;
+        return SoundEvents.PILLAGER_AMBIENT;
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
-        return SoundEvents.PHANTOM_HURT;
+        return SoundEvents.PILLAGER_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.PHANTOM_DEATH;
+        return SoundEvents.PILLAGER_DEATH;
     }
 
 }

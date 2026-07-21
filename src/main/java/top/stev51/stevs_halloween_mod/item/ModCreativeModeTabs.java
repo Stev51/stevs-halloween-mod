@@ -27,8 +27,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.APPLE_PIE);
 
                         // Spawn Eggs
+                        output.accept(ModItems.DEVIL_SPAWN_EGG);
                         output.accept(ModItems.GHOST_SPAWN_EGG);
+                        output.accept(ModItems.FRANKENSTEIN_SPAWN_EGG); // Monster
+                        output.accept(ModItems.MUMMY_SPAWN_EGG);
                         output.accept(ModItems.VAMPIRE_SPAWN_EGG);
+                        output.accept(ModItems.WEREWOLF_SPAWN_EGG);
 
                     })
                     .build()
