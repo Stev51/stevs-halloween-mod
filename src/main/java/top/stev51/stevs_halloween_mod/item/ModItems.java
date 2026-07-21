@@ -15,15 +15,6 @@ public class ModItems {
 
 
 
-    // Food
-
-    public static final DeferredItem<Item> APPLE_PIE = ITEMS.register("apple_pie",
-            () -> new Item(new Item.Properties()
-                    .food(ModFoodProperties.APPLE_PIE)
-    ));
-
-
-
     // Spawn Eggs
 
     public static final DeferredItem<Item> GHOST_SPAWN_EGG = ITEMS.register("ghost_spawn_egg",

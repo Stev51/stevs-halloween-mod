@@ -18,8 +18,8 @@ BEFORE RELEASE
 - Candy drop loot tables
 - Pumpkin seeds drop from grass
 - Title screen background
-- Possibly redo foliage colors based on vanilla
-- REMOVE APPLE PIE
+- Splash texts?
+- Possibly redo foliage colors from vanilla textures?
 
 AFTER RELEASE
 - Crops
@@ -48,5 +48,4 @@ AFTER RELEASE
         - Scarecrow
         - Pumpkin
         - Clown
-- Splash texts?
 - Music discs?

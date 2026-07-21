@@ -21,13 +21,7 @@ public class ModRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.APPLE_PIE.get(), 1)
-                .requires(Items.APPLE)
-                .requires(Items.APPLE)
-                .requires(Items.SUGAR)
-                .requires(Tags.Items.EGGS)
-                .unlockedBy("has_apple", has(Items.APPLE))
-                .save(recipeOutput);
+        ;
 
     }
 

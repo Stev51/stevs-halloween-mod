@@ -23,9 +23,6 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.stevs_halloween_mod.stevs_halloween_mod_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
-                        // Food
-                        output.accept(ModItems.APPLE_PIE);
-
                         // Spawn Eggs
                         output.accept(ModItems.DEVIL_SPAWN_EGG);
                         output.accept(ModItems.GHOST_SPAWN_EGG);
