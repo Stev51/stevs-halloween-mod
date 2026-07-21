@@ -21,6 +21,7 @@ import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
@@ -29,7 +30,8 @@ import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
 
-    public static final BooleanProperty APPLE_GROWTH = BooleanProperty.create("apple_growth");
+    public static final int MAX_AGE = 3;
+    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, MAX_AGE);
 
     public AppleLeavesBlock(Properties properties) {
         super(properties);
@@ -37,24 +39,24 @@ public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
                 .setValue(DISTANCE, 7))
                 .setValue(PERSISTENT, false))
                 .setValue(WATERLOGGED, false))
-                .setValue(APPLE_GROWTH, true));
+                .setValue(AGE, 0));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{DISTANCE, PERSISTENT, WATERLOGGED, APPLE_GROWTH});
+        builder.add(new Property[]{DISTANCE, PERSISTENT, WATERLOGGED, AGE});
     }
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        boolean growth = state.getValue(APPLE_GROWTH);
+        boolean growth = (state.getValue(AGE) == MAX_AGE);
         return !growth && stack.is(Items.BONE_MEAL) ? ItemInteractionResult.SKIP_DEFAULT_BLOCK_INTERACTION : ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
 
-        boolean growth = state.getValue(APPLE_GROWTH);
+        boolean growth = (state.getValue(AGE) == MAX_AGE);
 
         if (growth) {
 
@@ -62,7 +64,7 @@ public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
             ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(Items.APPLE, i));
             level.playSound(null, pos, SoundEvents.CAVE_VINES_PICK_BERRIES, SoundSource.BLOCKS, 1f, 0.8f + level.random.nextFloat() * 0.4f);
 
-            BlockState blockstate = state.setValue(APPLE_GROWTH, false);
+            BlockState blockstate = state.setValue(AGE, 0);
             level.setBlockAndUpdate(pos, blockstate);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, blockstate));
 
@@ -78,18 +80,24 @@ public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
 
     @Override
     protected boolean isRandomlyTicking(BlockState state) {
-        return !state.getValue(APPLE_GROWTH);
+        return (((Integer)state.getValue(DISTANCE) == 7 && !(Boolean)state.getValue(PERSISTENT)) || (state.getValue(AGE) != MAX_AGE));
     }
 
     @Override
     protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
 
-        boolean growth = state.getValue(APPLE_GROWTH);
+        int age = state.getValue(AGE);
+        boolean growth = (age == MAX_AGE);
 
         if (!growth) {
-            BlockState blockstate = state.setValue(APPLE_GROWTH, true);
+            BlockState blockstate = state.setValue(AGE, age + 1);
             level.setBlockAndUpdate(pos, blockstate);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(blockstate));
+        }
+
+        if (this.decaying(state)) {
+            dropResources(state, level, pos);
+            level.removeBlock(pos, false);
         }
 
     }
@@ -110,7 +118,7 @@ public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
     }
 
     public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state) {
-        return !state.getValue(APPLE_GROWTH);
+        return (state.getValue(AGE) != MAX_AGE);
     }
 
     public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
@@ -118,7 +126,7 @@ public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
     }
 
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
-        level.setBlockAndUpdate(pos, state.setValue(APPLE_GROWTH, true));
+        level.setBlockAndUpdate(pos, state.setValue(AGE, MAX_AGE));
     }
 
 }

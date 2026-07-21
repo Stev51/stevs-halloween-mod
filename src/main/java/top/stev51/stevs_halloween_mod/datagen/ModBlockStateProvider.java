@@ -26,7 +26,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         getVariantBuilder(ModBlocks.APPLE_LEAVES.get()).forAllStates(state -> {
 
-            if (state.getValue(AppleLeavesBlock.APPLE_GROWTH)) {
+            if (state.getValue(AppleLeavesBlock.AGE) == AppleLeavesBlock.MAX_AGE) {
 
                 return new ConfiguredModel[]{new ConfiguredModel(models().singleTexture(
                         "apple_leaves_with_apples",
