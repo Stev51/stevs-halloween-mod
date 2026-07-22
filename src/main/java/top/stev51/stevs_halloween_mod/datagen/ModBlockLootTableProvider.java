@@ -7,6 +7,7 @@ import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import top.stev51.stevs_halloween_mod.block.ModBlocks;
 
 import java.util.Set;
@@ -25,6 +26,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.APPLE_LEAVES.get(),
                 block -> createOakLeavesDrops(block, ModBlocks.APPLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)
         );
+
+        dropPottedContents(ModBlocks.POTTED_APPLE_SAPLING.get());
 
     }
 

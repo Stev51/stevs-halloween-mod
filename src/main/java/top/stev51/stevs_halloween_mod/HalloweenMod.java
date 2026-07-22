@@ -1,6 +1,8 @@
 package top.stev51.stevs_halloween_mod;
 
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -45,7 +47,11 @@ public class HalloweenMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        ;
+
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock)Blocks.FLOWER_POT).addPlant(ModBlocks.APPLE_SAPLING.getId(), ModBlocks.POTTED_APPLE_SAPLING);
+        });
+
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {

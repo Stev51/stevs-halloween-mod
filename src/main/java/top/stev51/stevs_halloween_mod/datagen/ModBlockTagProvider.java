@@ -30,6 +30,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.SAPLINGS)
                 .add(ModBlocks.APPLE_SAPLING.get());
 
+        tag(BlockTags.FLOWER_POTS)
+                .add(ModBlocks.POTTED_APPLE_SAPLING.get());
+
     }
 
 }

@@ -24,6 +24,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         saplingBlock(ModBlocks.APPLE_SAPLING);
 
+        simpleBlockWithItem(ModBlocks.POTTED_APPLE_SAPLING.get(), models().flowerPotCross(
+                "potted_apple_sapling",
+                blockTexture(ModBlocks.APPLE_SAPLING.get())).renderType("cutout")
+        );
+
         getVariantBuilder(ModBlocks.APPLE_LEAVES.get()).forAllStates(state -> {
 
             if (state.getValue(AppleLeavesBlock.AGE) == AppleLeavesBlock.MAX_AGE) {
@@ -62,11 +67,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void blockItem(DeferredBlock<?> deferredBlock) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("testmod:block/" + deferredBlock.getId().getPath()));
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile(HalloweenMod.MOD_ID + deferredBlock.getId().getPath()));
     }
 
     private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("testmod:block/" + deferredBlock.getId().getPath() + appendix));
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile(HalloweenMod.MOD_ID + deferredBlock.getId().getPath() + appendix));
     }
 
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
