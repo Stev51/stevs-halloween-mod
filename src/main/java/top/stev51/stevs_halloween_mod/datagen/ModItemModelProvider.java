@@ -22,6 +22,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         saplingItem(ModBlocks.APPLE_SAPLING);
 
+        basicItem(ModItems.APPLE_CORE.get());
+
         withExistingParent(ModItems.GHOST_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.VAMPIRE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.WEREWOLF_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));

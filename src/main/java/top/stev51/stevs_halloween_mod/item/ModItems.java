@@ -1,11 +1,14 @@
 package top.stev51.stevs_halloween_mod.item;
 
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.stev51.stevs_halloween_mod.HalloweenMod;
+import top.stev51.stevs_halloween_mod.block.ModBlocks;
 import top.stev51.stevs_halloween_mod.entity.ModEntities;
 import top.stev51.stevs_halloween_mod.item.custom.ModFoodProperties;
 
@@ -14,6 +17,12 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(HalloweenMod.MOD_ID);
 
 
+
+    // Misc
+
+    public static final DeferredItem<Item> APPLE_CORE = ITEMS.register("apple_core",
+            () -> new ItemNameBlockItem(ModBlocks.APPLE_SAPLING.get(), new Item.Properties())
+    );
 
     // Spawn Eggs
 

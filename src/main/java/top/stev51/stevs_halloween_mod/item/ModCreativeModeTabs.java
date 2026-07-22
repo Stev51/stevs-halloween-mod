@@ -28,6 +28,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.APPLE_LEAVES);
                         output.accept(ModBlocks.APPLE_SAPLING);
 
+                        // Items
+                        output.accept(ModItems.APPLE_CORE);
+
                         // Spawn Eggs
                         output.accept(ModItems.DEVIL_SPAWN_EGG);
                         output.accept(ModItems.GHOST_SPAWN_EGG);
