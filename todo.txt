@@ -1,6 +1,4 @@
 BEFORE RELEASE
-- Crops
-    - Apple Tree
 - Food
     - Non-craftable candy
         - Peanut Butter Cup
