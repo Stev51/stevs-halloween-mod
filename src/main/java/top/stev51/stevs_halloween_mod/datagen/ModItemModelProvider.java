@@ -22,6 +22,17 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         saplingItem(ModBlocks.APPLE_SAPLING);
 
+        basicItem(ModItems.PEANUT_BUTTER_CUP.get());
+        basicItem(ModItems.GUMDROP.get());
+        basicItem(ModItems.LOLLIPOP.get());
+        basicItem(ModItems.HARD_CANDY.get());
+        basicItem(ModItems.SUGAR_COOKIE.get());
+        basicItem(ModItems.CHOCOLATE_BAR.get());
+        basicItem(ModItems.CARAMEL.get());
+        basicItem(ModItems.CARAMEL_APPLE.get());
+        basicItem(ModItems.CANDY_APPLE.get());
+        basicItem(ModItems.TOASTED_PUMPKIN_SEEDS.get());
+
         basicItem(ModItems.APPLE_CORE.get());
 
         withExistingParent(ModItems.GHOST_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));

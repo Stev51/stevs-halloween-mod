@@ -18,6 +18,52 @@ public class ModItems {
 
 
 
+    // Foods - Non-craftable candy
+
+    public static final DeferredItem<Item> PEANUT_BUTTER_CUP = ITEMS.register("peanut_butter_cup",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.PEANUT_BUTTER_CUP))
+    );
+
+    public static final DeferredItem<Item> GUMDROP = ITEMS.register("gumdrop",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.GUMDROP))
+    );
+
+    public static final DeferredItem<Item> LOLLIPOP = ITEMS.register("lollipop",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.LOLLIPOP))
+    );
+
+    public static final DeferredItem<Item> HARD_CANDY = ITEMS.register("hard_candy",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.HARD_CANDY))
+    );
+
+    // Foods - Craftable candy
+
+    public static final DeferredItem<Item> SUGAR_COOKIE = ITEMS.register("sugar_cookie",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.SUGAR_COOKIE))
+    );
+
+    public static final DeferredItem<Item> CHOCOLATE_BAR = ITEMS.register("chocolate_bar",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.CHOCOLATE_BAR))
+    );
+
+    public static final DeferredItem<Item> CARAMEL = ITEMS.register("caramel",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.CARAMEL))
+    );
+
+    public static final DeferredItem<Item> CARAMEL_APPLE = ITEMS.register("caramel_apple",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.CARAMEL_APPLE))
+    );
+
+    public static final DeferredItem<Item> CANDY_APPLE = ITEMS.register("candy_apple",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.CANDY_APPLE))
+    );
+
+    // Foods - Misc
+
+    public static final DeferredItem<Item> TOASTED_PUMPKIN_SEEDS = ITEMS.register("toasted_pumpkin_seeds",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.TOASTED_PUMPKIN_SEEDS))
+    );
+
     // Misc
 
     public static final DeferredItem<Item> APPLE_CORE = ITEMS.register("apple_core",

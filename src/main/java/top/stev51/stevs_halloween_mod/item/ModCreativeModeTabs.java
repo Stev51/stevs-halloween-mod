@@ -28,7 +28,19 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.APPLE_LEAVES);
                         output.accept(ModBlocks.APPLE_SAPLING);
 
-                        // Items
+                        // Items - Food
+                        output.accept(ModItems.CANDY_APPLE);
+                        output.accept(ModItems.CARAMEL);
+                        output.accept(ModItems.CARAMEL_APPLE);
+                        output.accept(ModItems.CHOCOLATE_BAR);
+                        output.accept(ModItems.GUMDROP);
+                        output.accept(ModItems.HARD_CANDY);
+                        output.accept(ModItems.LOLLIPOP);
+                        output.accept(ModItems.PEANUT_BUTTER_CUP);
+                        output.accept(ModItems.SUGAR_COOKIE);
+                        output.accept(ModItems.TOASTED_PUMPKIN_SEEDS);
+
+                        // Items - Misc
                         output.accept(ModItems.APPLE_CORE);
 
                         // Spawn Eggs

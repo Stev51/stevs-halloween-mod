@@ -10,6 +10,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 import top.stev51.stevs_halloween_mod.HalloweenMod;
 import top.stev51.stevs_halloween_mod.block.ModBlocks;
+import top.stev51.stevs_halloween_mod.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -27,6 +28,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.SAPLINGS)
                 .add(ModBlocks.APPLE_SAPLING.asItem());
+
+        tag(ItemTags.PARROT_POISONOUS_FOOD)
+                .add(ModItems.PEANUT_BUTTER_CUP.get())
+                .add(ModItems.CHOCOLATE_BAR.get());
 
     }
 

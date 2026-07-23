@@ -1,18 +1,6 @@
 BEFORE RELEASE
-- Food
-    - Non-craftable candy
-        - Peanut Butter Cup
-        - Gumdrop
-        - Lollipop
-        - Hard Candy
-    - Craftable candy
-        - Sugar Cookie (wheat + sugar)
-        - Chocolate Bar (cocoa + sugar + milk)
-        - Caramel (cook sugar)
-        - Caramel Apple (stick + apple + caramel)
-        - Candy Apple (stick + apple + sugar)
-    - Misc
-        - Toasted Pumpkin Seeds (cook pumpkin seeds)
+- Food recipes
+- Food textures
 - Candy drop loot tables
 - Pumpkin seeds drop from grass
 - Title screen background
