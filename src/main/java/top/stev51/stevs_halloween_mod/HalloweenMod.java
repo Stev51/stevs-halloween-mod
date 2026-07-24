@@ -24,6 +24,7 @@ import top.stev51.stevs_halloween_mod.entity.ModEntities;
 import top.stev51.stevs_halloween_mod.entity.client.*;
 import top.stev51.stevs_halloween_mod.item.ModCreativeModeTabs;
 import top.stev51.stevs_halloween_mod.item.ModItems;
+import top.stev51.stevs_halloween_mod.loot.ModLootModifiers;
 
 @Mod(HalloweenMod.MOD_ID)
 public class HalloweenMod {
@@ -40,6 +41,7 @@ public class HalloweenMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

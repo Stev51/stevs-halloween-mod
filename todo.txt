@@ -2,7 +2,6 @@ BEFORE RELEASE
 - Food textures
 - Mob textures
 - Candy drop loot tables
-- Pumpkin seeds drop from grass
 - Title screen background
 - Splash texts?
 - Possibly redo foliage colors from vanilla textures?
