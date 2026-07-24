@@ -3,11 +3,16 @@ package top.stev51.stevs_halloween_mod.entity.custom;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
@@ -16,6 +21,7 @@ public class DevilEntity extends BaseHalloweenMonster {
     public DevilEntity(EntityType<? extends BaseHalloweenMonster> entityType, Level level) {
         super(entityType, level,
                 false, false);
+        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.TRIDENT));
     }
 
     public static AttributeSupplier.Builder createAttributes() {

@@ -36,3 +36,4 @@ AFTER RELEASE
         - Clown
         - Cowboy
 - Music discs?
+- Custom "Devil Pitchfork" variant of Trident?
