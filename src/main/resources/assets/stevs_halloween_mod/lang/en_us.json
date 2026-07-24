@@ -24,12 +24,12 @@
   "item.stevs_halloween_mod.mummy_spawn_egg": "Mummy Spawn Egg",
   "item.stevs_halloween_mod.devil_spawn_egg": "Devil Spawn Egg",
 
-  "entity.mccourse.ghost": "Ghost",
-  "entity.mccourse.vampire": "Vampire",
-  "entity.mccourse.werewolf": "Werewolf",
-  "entity.mccourse.frankenstein": "Monster",
-  "entity.mccourse.mummy": "Mummy",
-  "entity.mccourse.devil": "Devil",
+  "entity.stevs_halloween_mod.ghost": "Ghost",
+  "entity.stevs_halloween_mod.vampire": "Vampire",
+  "entity.stevs_halloween_mod.werewolf": "Werewolf",
+  "entity.stevs_halloween_mod.frankenstein": "Monster",
+  "entity.stevs_halloween_mod.mummy": "Mummy",
+  "entity.stevs_halloween_mod.devil": "Devil",
 
   "creativetab.stevs_halloween_mod.stevs_halloween_mod_tab": "Stev's Halloween Mod"
 
