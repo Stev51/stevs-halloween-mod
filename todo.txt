@@ -1,6 +1,7 @@
 - Crops
     - Yam
 - Food
+    - Bag of Candy
     - Baked Sweet Potato
 - Mobs
     - Goblin
@@ -26,5 +27,5 @@
         - Clown
         - Cowboy
 - Music discs?
-- Custom "Devil Pitchfork" variant of Trident?
+- Custom "Devil Pitchfork" variant of Trident
 - Apple Leaves drop more apples on break/decay
