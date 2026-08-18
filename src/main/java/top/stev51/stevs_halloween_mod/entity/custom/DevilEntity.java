@@ -15,6 +15,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
+import top.stev51.stevs_halloween_mod.sound.ModSoundEvents;
 
 public class DevilEntity extends BaseHalloweenMonster {
 
@@ -42,17 +43,17 @@ public class DevilEntity extends BaseHalloweenMonster {
 
     @Override
     protected @Nullable SoundEvent getAmbientSound() {
-        return SoundEvents.PILLAGER_AMBIENT;
+        return ModSoundEvents.DEVIL_AMBIENT.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
-        return SoundEvents.PILLAGER_HURT;
+        return ModSoundEvents.DEVIL_HURT.get();
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.PILLAGER_DEATH;
+        return ModSoundEvents.DEVIL_DEATH.get();
     }
 
 }

@@ -15,14 +15,31 @@ public class ModSoundEvents {
 
 
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> DEVIL_AMBIENT = SOUND_EVENTS.register(
+            "entity.devil.ambient",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "devil_ambient"))
+    );
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> DEVIL_HURT = SOUND_EVENTS.register(
+            "entity.devil.hurt",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "devil_hurt"))
+    );
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> DEVIL_DEATH = SOUND_EVENTS.register(
+            "entity.devil.death",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "devil_death"))
+    );
+
+
+
     public static final DeferredHolder<SoundEvent, SoundEvent> WEREWOLF_HOWL = SOUND_EVENTS.register(
             "entity.werewolf.howl",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "werewolf_howl"))
     );
 
     public static final DeferredHolder<SoundEvent, SoundEvent> WEREWOLF_HURT = SOUND_EVENTS.register(
-            "entity.werewolf.growl",
-            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "werewolf_growl"))
+            "entity.werewolf.hurt",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "werewolf_hurt"))
     );
 
     public static final DeferredHolder<SoundEvent, SoundEvent> WEREWOLF_DEATH = SOUND_EVENTS.register(

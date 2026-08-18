@@ -18,6 +18,35 @@ public class ModSoundDefinitionsProvider extends SoundDefinitionsProvider {
 
 
 
+        add(ModSoundEvents.DEVIL_AMBIENT, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/devil/idle1"),
+                        sound("stevs_halloween_mod:mob/devil/idle2"),
+                        sound("stevs_halloween_mod:mob/devil/idle3"),
+                        sound("stevs_halloween_mod:mob/devil/idle4")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.devil.ambient")
+        );
+
+        add(ModSoundEvents.DEVIL_HURT, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/devil/hurt1"),
+                        sound("stevs_halloween_mod:mob/devil/hurt2"),
+                        sound("stevs_halloween_mod:mob/devil/hurt3")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.devil.hurt")
+        );
+
+        add(ModSoundEvents.DEVIL_DEATH, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/devil/death1"),
+                        sound("stevs_halloween_mod:mob/devil/death2")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.devil.death")
+        );
+
+
+
         add(ModSoundEvents.WEREWOLF_HOWL, SoundDefinition.definition()
                 .with(
                         sound("stevs_halloween_mod:mob/werewolf/howl1")
