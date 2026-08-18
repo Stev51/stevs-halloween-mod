@@ -1,7 +1,15 @@
+SOON:
+- Bag of Candy
+- Doorbells
+- Check on custom werewolf sound event?
+- Rebalance mob stats
+- Biome specific mob spawns
+- Sound for picking apples
+
+LATER:
 - Crops
     - Yam
 - Food
-    - Bag of Candy
     - Baked Sweet Potato
 - Mobs
     - Goblin
