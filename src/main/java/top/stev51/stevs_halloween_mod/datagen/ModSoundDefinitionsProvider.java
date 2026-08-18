@@ -131,6 +131,24 @@ public class ModSoundDefinitionsProvider extends SoundDefinitionsProvider {
 
 
 
+        add(ModSoundEvents.VAMPIRE_HISS, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/vampire/hiss1"),
+                        sound("stevs_halloween_mod:mob/vampire/hiss2"),
+                        sound("stevs_halloween_mod:mob/vampire/hiss3")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.vampire.hiss")
+        );
+
+        add(ModSoundEvents.VAMPIRE_DEATH, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/vampire/death")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.vampire.death")
+        );
+
+
+
         add(ModSoundEvents.WEREWOLF_HOWL, SoundDefinition.definition()
                 .with(
                         sound("stevs_halloween_mod:mob/werewolf/howl1")

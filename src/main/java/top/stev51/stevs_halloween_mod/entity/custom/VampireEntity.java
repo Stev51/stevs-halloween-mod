@@ -9,6 +9,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
+import top.stev51.stevs_halloween_mod.sound.ModSoundEvents;
 
 public class VampireEntity extends BaseHalloweenMonster {
 
@@ -26,12 +27,12 @@ public class VampireEntity extends BaseHalloweenMonster {
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
-        return SoundEvents.CAT_HISS;
+        return ModSoundEvents.VAMPIRE_HISS.get();
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.SPIDER_DEATH;
+        return ModSoundEvents.VAMPIRE_DEATH.get();
     }
 
 }
