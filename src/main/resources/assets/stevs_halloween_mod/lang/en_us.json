@@ -32,6 +32,8 @@
   "entity.stevs_halloween_mod.mummy": "Mummy",
   "entity.stevs_halloween_mod.devil": "Devil",
 
-  "creativetab.stevs_halloween_mod.stevs_halloween_mod_tab": "Stev's Halloween Mod"
+  "creativetab.stevs_halloween_mod.stevs_halloween_mod_tab": "Stev's Halloween Mod",
+
+  "subtitles.stevs_halloween_mod.entity.werewolf.howl": "Werewolf howls"
 
 }

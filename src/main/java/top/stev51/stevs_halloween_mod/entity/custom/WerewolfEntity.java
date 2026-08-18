@@ -10,6 +10,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
+import top.stev51.stevs_halloween_mod.sound.ModSoundEvents;
 
 public class WerewolfEntity extends BaseHalloweenMonster {
 
@@ -27,7 +28,7 @@ public class WerewolfEntity extends BaseHalloweenMonster {
 
     @Override
     protected @Nullable SoundEvent getAmbientSound() {
-        return SoundEvents.WOLF_HOWL;
+        return ModSoundEvents.WEREWOLF_HOWL.get();
     }
 
     @Override

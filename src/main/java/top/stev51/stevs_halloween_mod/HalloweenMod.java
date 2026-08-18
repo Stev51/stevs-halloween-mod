@@ -20,6 +20,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import top.stev51.stevs_halloween_mod.block.ModBlocks;
+import top.stev51.stevs_halloween_mod.sound.ModSoundEvents;
 import top.stev51.stevs_halloween_mod.entity.ModEntities;
 import top.stev51.stevs_halloween_mod.entity.client.*;
 import top.stev51.stevs_halloween_mod.item.ModCreativeModeTabs;
@@ -42,6 +43,7 @@ public class HalloweenMod {
         ModBlocks.register(modEventBus);
         ModEntities.register(modEventBus);
         ModLootModifiers.register(modEventBus);
+        ModSoundEvents.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
