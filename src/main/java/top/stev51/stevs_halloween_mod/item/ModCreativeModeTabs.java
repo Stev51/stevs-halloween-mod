@@ -28,7 +28,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.APPLE_LEAVES);
                         output.accept(ModBlocks.APPLE_SAPLING);
 
-                        // Items - Food
+                        // Items - Food - Candy
                         output.accept(ModItems.CANDY_APPLE);
                         output.accept(ModItems.CARAMEL_APPLE);
                         output.accept(ModItems.CARAMEL);
@@ -39,6 +39,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PEANUT_BUTTER_CUP);
                         output.accept(ModItems.SUGAR_COOKIE);
                         output.accept(ModItems.FROSTED_SUGAR_COOKIE);
+                        output.accept(ModItems.CANDY_BAG);
+
+                        // Items - Food - Misc
                         output.accept(ModItems.TOASTED_PUMPKIN_SEEDS);
 
                         // Items - Misc

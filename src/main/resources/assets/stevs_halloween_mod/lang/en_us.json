@@ -14,6 +14,8 @@
   "item.stevs_halloween_mod.caramel": "Caramel",
   "item.stevs_halloween_mod.caramel_apple": "Caramel Apple",
   "item.stevs_halloween_mod.candy_apple": "Candy Apple",
+  "item.stevs_halloween_mod.candy_bag": "Bag of Candy",
+
   "item.stevs_halloween_mod.toasted_pumpkin_seeds": "Toasted Pumpkin Seeds",
 
   "item.stevs_halloween_mod.apple_core": "Apple Core",
@@ -35,6 +37,7 @@
   "creativetab.stevs_halloween_mod.stevs_halloween_mod_tab": "Stev's Halloween Mod",
 
   "subtitles.stevs_halloween_mod.item.apple.pick": "Apples picked",
+
   "subtitles.stevs_halloween_mod.entity.devil.ambient": "Devil murmurs",
   "subtitles.stevs_halloween_mod.entity.devil.hurt": "Devil hurts",
   "subtitles.stevs_halloween_mod.entity.devil.death": "Devil dies",

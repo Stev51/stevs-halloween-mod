@@ -9,7 +9,6 @@ SOON:
 - Doorbells
 - Rebalance mob stats
 - Biome specific mob spawns
-- Sound for picking apples
 
 LATER:
 - Crops

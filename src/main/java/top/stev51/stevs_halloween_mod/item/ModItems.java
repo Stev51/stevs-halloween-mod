@@ -62,6 +62,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.CANDY_APPLE))
     );
 
+    public static final DeferredItem<Item> CANDY_BAG = ITEMS.register("candy_bag",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.CANDY_BAG))
+    );
+
     // Foods - Misc
 
     public static final DeferredItem<Item> TOASTED_PUMPKIN_SEEDS = ITEMS.register("toasted_pumpkin_seeds",

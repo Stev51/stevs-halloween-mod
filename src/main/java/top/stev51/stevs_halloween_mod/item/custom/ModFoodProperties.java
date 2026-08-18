@@ -60,6 +60,11 @@ public class ModFoodProperties {
             .saturationModifier(0.3f)
             .build();
 
+    public static final FoodProperties CANDY_BAG = new FoodProperties.Builder()
+            .nutrition(20)
+            .saturationModifier(0.3f)
+            .build();
+
     public static final FoodProperties TOASTED_PUMPKIN_SEEDS = new FoodProperties.Builder()
             .nutrition(4)
             .saturationModifier(0.6f)
