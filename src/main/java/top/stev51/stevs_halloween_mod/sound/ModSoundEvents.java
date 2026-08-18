@@ -32,6 +32,23 @@ public class ModSoundEvents {
 
 
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> FRANKENSTEIN_AMBIENT = SOUND_EVENTS.register(
+            "entity.frankenstein.ambient",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "frankenstein_ambient"))
+    );
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> FRANKENSTEIN_HURT = SOUND_EVENTS.register(
+            "entity.frankenstein.hurt",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "frankenstein_hurt"))
+    );
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> FRANKENSTEIN_DEATH = SOUND_EVENTS.register(
+            "entity.frankenstein.death",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "frankenstein_death"))
+    );
+
+
+
     public static final DeferredHolder<SoundEvent, SoundEvent> WEREWOLF_HOWL = SOUND_EVENTS.register(
             "entity.werewolf.howl",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "werewolf_howl"))

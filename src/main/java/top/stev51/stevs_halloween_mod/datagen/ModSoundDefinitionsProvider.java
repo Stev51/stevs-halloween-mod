@@ -47,6 +47,32 @@ public class ModSoundDefinitionsProvider extends SoundDefinitionsProvider {
 
 
 
+        add(ModSoundEvents.FRANKENSTEIN_AMBIENT, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/frankenstein/say1"),
+                        sound("stevs_halloween_mod:mob/frankenstein/say2"),
+                        sound("stevs_halloween_mod:mob/frankenstein/say3")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.frankenstein.ambient")
+        );
+
+        add(ModSoundEvents.FRANKENSTEIN_HURT, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/frankenstein/hurt1"),
+                        sound("stevs_halloween_mod:mob/frankenstein/hurt2")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.frankenstein.hurt")
+        );
+
+        add(ModSoundEvents.FRANKENSTEIN_DEATH, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/frankenstein/death")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.frankenstein.death")
+        );
+
+
+
         add(ModSoundEvents.WEREWOLF_HOWL, SoundDefinition.definition()
                 .with(
                         sound("stevs_halloween_mod:mob/werewolf/howl1")

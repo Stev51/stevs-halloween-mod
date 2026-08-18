@@ -10,6 +10,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
+import top.stev51.stevs_halloween_mod.sound.ModSoundEvents;
 
 public class FrankensteinEntity extends BaseHalloweenMonster {
 
@@ -27,17 +28,17 @@ public class FrankensteinEntity extends BaseHalloweenMonster {
 
     @Override
     protected @Nullable SoundEvent getAmbientSound() {
-        return SoundEvents.ZOMBIE_VILLAGER_AMBIENT;
+        return ModSoundEvents.FRANKENSTEIN_AMBIENT.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
-        return SoundEvents.ZOMBIE_VILLAGER_HURT;
+        return ModSoundEvents.FRANKENSTEIN_HURT.get();
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ZOMBIE_VILLAGER_DEATH;
+        return ModSoundEvents.FRANKENSTEIN_DEATH.get();
     }
 
 }
