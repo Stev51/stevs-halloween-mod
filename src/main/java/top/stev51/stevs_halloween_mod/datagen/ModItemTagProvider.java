@@ -11,6 +11,7 @@ import org.jetbrains.annotations.Nullable;
 import top.stev51.stevs_halloween_mod.HalloweenMod;
 import top.stev51.stevs_halloween_mod.block.ModBlocks;
 import top.stev51.stevs_halloween_mod.item.ModItems;
+import top.stev51.stevs_halloween_mod.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -22,6 +23,18 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+
+        tag(ModTags.Items.CANDY)
+                .add(ModItems.CANDY_APPLE.get())
+                .add(ModItems.CARAMEL_APPLE.get())
+                .add(ModItems.CARAMEL.get())
+                .add(ModItems.CHOCOLATE_BAR.get())
+                .add(ModItems.GUMDROP.get())
+                .add(ModItems.HARD_CANDY.get())
+                .add(ModItems.LOLLIPOP.get())
+                .add(ModItems.PEANUT_BUTTER_CUP.get())
+                .add(ModItems.SUGAR_COOKIE.get())
+                .add(ModItems.FROSTED_SUGAR_COOKIE.get());
 
         tag(ItemTags.LEAVES)
                 .add(ModBlocks.APPLE_LEAVES.asItem());

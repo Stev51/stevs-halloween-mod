@@ -9,6 +9,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.neoforged.neoforge.common.Tags;
 import top.stev51.stevs_halloween_mod.item.ModItems;
+import top.stev51.stevs_halloween_mod.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -73,6 +74,19 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(Items.SUGAR)
                 .requires(Items.MILK_BUCKET)
                 .unlockedBy("has_cocoa_beans", has(Items.COCOA_BEANS))
+                .save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CANDY_BAG.get(), 1)
+                .requires(ModTags.Items.CANDY)
+                .requires(ModTags.Items.CANDY)
+                .requires(ModTags.Items.CANDY)
+                .requires(ModTags.Items.CANDY)
+                .requires(ModTags.Items.CANDY)
+                .requires(ModTags.Items.CANDY)
+                .requires(ModTags.Items.CANDY)
+                .requires(ModTags.Items.CANDY)
+                .requires(ModTags.Items.CANDY)
+                .unlockedBy("has_candy", has(ModTags.Items.CANDY))
                 .save(recipeOutput);
 
         SimpleCookingRecipeBuilder.smelting(
