@@ -73,6 +73,37 @@ public class ModSoundDefinitionsProvider extends SoundDefinitionsProvider {
 
 
 
+        add(ModSoundEvents.GHOST_AMBIENT, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/ghost/idle1"),
+                        sound("stevs_halloween_mod:mob/ghost/idle2"),
+                        sound("stevs_halloween_mod:mob/ghost/idle3"),
+                        sound("stevs_halloween_mod:mob/ghost/idle4"),
+                        sound("stevs_halloween_mod:mob/ghost/idle5")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.ghost.ambient")
+        );
+
+        add(ModSoundEvents.GHOST_HURT, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/ghost/hurt1"),
+                        sound("stevs_halloween_mod:mob/ghost/hurt2"),
+                        sound("stevs_halloween_mod:mob/ghost/hurt3")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.ghost.hurt")
+        );
+
+        add(ModSoundEvents.GHOST_DEATH, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/ghost/death1"),
+                        sound("stevs_halloween_mod:mob/ghost/death2"),
+                        sound("stevs_halloween_mod:mob/ghost/death3")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.ghost.death")
+        );
+
+
+
         add(ModSoundEvents.WEREWOLF_HOWL, SoundDefinition.definition()
                 .with(
                         sound("stevs_halloween_mod:mob/werewolf/howl1")

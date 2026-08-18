@@ -40,6 +40,9 @@
   "subtitles.stevs_halloween_mod.entity.frankenstein.ambient": "Monster groans",
   "subtitles.stevs_halloween_mod.entity.frankenstein.hurt": "Monster hurts",
   "subtitles.stevs_halloween_mod.entity.frankenstein.death": "Monster dies",
+  "subtitles.stevs_halloween_mod.entity.ghost.ambient": "Ghost moans",
+  "subtitles.stevs_halloween_mod.entity.ghost.hurt": "Ghost hurts",
+  "subtitles.stevs_halloween_mod.entity.ghost.death": "Ghost dies",
   "subtitles.stevs_halloween_mod.entity.werewolf.howl": "Werewolf howls",
   "subtitles.stevs_halloween_mod.entity.werewolf.hurt": "Werewolf hurts",
   "subtitles.stevs_halloween_mod.entity.werewolf.death": "Werewolf dies"

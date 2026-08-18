@@ -1,6 +1,7 @@
 NEXT UPDATE CHANGELOG:
 - Changed all mobs to use custom sound events instead of vanilla sound events, and gave every mob sound a custom subtitle
 - Werewolf howls are now half as loud and half as frequent
+- Added a few new splash texts
 
 SOON:
 - Bag of Candy
