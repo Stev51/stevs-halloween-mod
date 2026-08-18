@@ -104,6 +104,33 @@ public class ModSoundDefinitionsProvider extends SoundDefinitionsProvider {
 
 
 
+        add(ModSoundEvents.MUMMY_AMBIENT, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/mummy/idle1"),
+                        sound("stevs_halloween_mod:mob/mummy/idle2"),
+                        sound("stevs_halloween_mod:mob/mummy/idle3")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.mummy.ambient")
+        );
+
+        add(ModSoundEvents.MUMMY_HURT, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/mummy/hurt1"),
+                        sound("stevs_halloween_mod:mob/mummy/hurt2")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.mummy.hurt")
+        );
+
+        add(ModSoundEvents.MUMMY_DEATH, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/mummy/death1"),
+                        sound("stevs_halloween_mod:mob/mummy/death2")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.mummy.death")
+        );
+
+
+
         add(ModSoundEvents.WEREWOLF_HOWL, SoundDefinition.definition()
                 .with(
                         sound("stevs_halloween_mod:mob/werewolf/howl1")

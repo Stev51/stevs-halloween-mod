@@ -10,6 +10,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
+import top.stev51.stevs_halloween_mod.sound.ModSoundEvents;
 
 public class MummyEntity extends BaseHalloweenMonster {
 
@@ -27,17 +28,17 @@ public class MummyEntity extends BaseHalloweenMonster {
 
     @Override
     protected @Nullable SoundEvent getAmbientSound() {
-        return SoundEvents.HUSK_AMBIENT;
+        return ModSoundEvents.MUMMY_AMBIENT.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
-        return SoundEvents.HUSK_HURT;
+        return ModSoundEvents.MUMMY_HURT.get();
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.HUSK_DEATH;
+        return ModSoundEvents.MUMMY_DEATH.get();
     }
 
 }
