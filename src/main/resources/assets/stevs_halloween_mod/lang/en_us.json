@@ -34,6 +34,8 @@
 
   "creativetab.stevs_halloween_mod.stevs_halloween_mod_tab": "Stev's Halloween Mod",
 
-  "subtitles.stevs_halloween_mod.entity.werewolf.howl": "Werewolf howls"
+  "subtitles.stevs_halloween_mod.entity.werewolf.howl": "Werewolf howls",
+  "subtitles.stevs_halloween_mod.entity.werewolf.hurt": "Werewolf hurts",
+  "subtitles.stevs_halloween_mod.entity.werewolf.death": "Werewolf dies"
 
 }

@@ -13,10 +13,24 @@ public class ModSoundEvents {
 
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, HalloweenMod.MOD_ID);
 
+
+
     public static final DeferredHolder<SoundEvent, SoundEvent> WEREWOLF_HOWL = SOUND_EVENTS.register(
             "entity.werewolf.howl",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "werewolf_howl"))
     );
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> WEREWOLF_HURT = SOUND_EVENTS.register(
+            "entity.werewolf.growl",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "werewolf_growl"))
+    );
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> WEREWOLF_DEATH = SOUND_EVENTS.register(
+            "entity.werewolf.death",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "werewolf_death"))
+    );
+
+
 
     public static void register(IEventBus eventBus) {
         SOUND_EVENTS.register(eventBus);

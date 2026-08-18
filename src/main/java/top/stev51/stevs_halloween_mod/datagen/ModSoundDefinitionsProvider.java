@@ -16,6 +16,8 @@ public class ModSoundDefinitionsProvider extends SoundDefinitionsProvider {
     @Override
     public void registerSounds() {
 
+
+
         add(ModSoundEvents.WEREWOLF_HOWL, SoundDefinition.definition()
                 .with(
                         sound("stevs_halloween_mod:mob/werewolf/howl1")
@@ -25,6 +27,24 @@ public class ModSoundDefinitionsProvider extends SoundDefinitionsProvider {
                 )
                 .subtitle("subtitles.stevs_halloween_mod.entity.werewolf.howl")
         );
+
+        add(ModSoundEvents.WEREWOLF_HURT, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/werewolf/growl1"),
+                        sound("stevs_halloween_mod:mob/werewolf/growl2"),
+                        sound("stevs_halloween_mod:mob/werewolf/growl3")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.werewolf.hurt")
+        );
+
+        add(ModSoundEvents.WEREWOLF_DEATH, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:mob/werewolf/death")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.entity.werewolf.death")
+        );
+
+
 
     }
 
