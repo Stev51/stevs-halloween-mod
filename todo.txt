@@ -7,7 +7,6 @@ NEXT UPDATE CHANGELOG:
 - Added a few new splash texts
 
 SOON:
-- Bag of Candy
 - Doorbells
 - Rebalance mob stats
 - Biome specific mob spawns
