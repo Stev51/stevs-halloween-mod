@@ -15,6 +15,13 @@ public class ModSoundEvents {
 
 
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> PICK_APPLES = SOUND_EVENTS.register(
+            "item.apple.pick",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "pick_apples"))
+    );
+
+
+
     public static final DeferredHolder<SoundEvent, SoundEvent> DEVIL_AMBIENT = SOUND_EVENTS.register(
             "entity.devil.ambient",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(HalloweenMod.MOD_ID, "devil_ambient"))

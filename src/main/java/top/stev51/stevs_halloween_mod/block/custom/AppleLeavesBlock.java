@@ -27,6 +27,7 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.neoforged.neoforge.common.CommonHooks;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
+import top.stev51.stevs_halloween_mod.sound.ModSoundEvents;
 
 public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
 
@@ -62,7 +63,7 @@ public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
 
             int i = 1 + level.random.nextInt(3);
             ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(Items.APPLE, i));
-            level.playSound(null, pos, SoundEvents.CAVE_VINES_PICK_BERRIES, SoundSource.BLOCKS, 1f, 0.8f + level.random.nextFloat() * 0.4f);
+            level.playSound(null, pos, ModSoundEvents.PICK_APPLES.get(), SoundSource.BLOCKS, 1f, 0.8f + level.random.nextFloat() * 0.4f);
 
             BlockState blockstate = state.setValue(AGE, 0);
             level.setBlockAndUpdate(pos, blockstate);

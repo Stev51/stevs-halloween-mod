@@ -18,6 +18,16 @@ public class ModSoundDefinitionsProvider extends SoundDefinitionsProvider {
 
 
 
+        add(ModSoundEvents.PICK_APPLES, SoundDefinition.definition()
+                .with(
+                        sound("stevs_halloween_mod:item/apple/pick1"),
+                        sound("stevs_halloween_mod:item/apple/pick2")
+                )
+                .subtitle("subtitles.stevs_halloween_mod.item.apple.pick")
+        );
+
+
+
         add(ModSoundEvents.DEVIL_AMBIENT, SoundDefinition.definition()
                 .with(
                         sound("stevs_halloween_mod:mob/devil/idle1"),
