@@ -21,9 +21,9 @@ public class FrankensteinEntity extends BaseHalloweenMonster {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
-                .add(Attributes.MAX_HEALTH, 30)
+                .add(Attributes.MAX_HEALTH, 26)
                 .add(Attributes.MOVEMENT_SPEED, 0.23d)
-                .add(Attributes.ATTACK_DAMAGE, 5.0d);
+                .add(Attributes.ATTACK_DAMAGE, 4.0d);
     }
 
     @Override

@@ -1,4 +1,5 @@
 NEXT UPDATE CHANGELOG:
+- Nerfed almost every mob to be easier
 - New food item: Bag of Candy, crafted with any 9 candy items
 - Candy food items now have the #candy tag
 - Changed all mobs to use custom sound events instead of vanilla sound events, and gave every mob sound a custom subtitle
@@ -7,8 +8,6 @@ NEXT UPDATE CHANGELOG:
 - Added a few new splash texts
 
 SOON:
-- Doorbells
-- Rebalance mob stats
 - Biome specific mob spawns
 
 LATER:
@@ -39,6 +38,8 @@ LATER:
         - Pumpkin
         - Clown
         - Cowboy
-- Music discs?
+- Redo foliage colors with dry colors in hot biomes
+- Doorbell buttons
 - Custom "Devil Pitchfork" variant of Trident
 - Apple Leaves drop more apples on break/decay
+- Music discs?

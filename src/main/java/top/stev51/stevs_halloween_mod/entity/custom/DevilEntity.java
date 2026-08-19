@@ -29,7 +29,7 @@ public class DevilEntity extends BaseHalloweenMonster {
         return Monster.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, 20)
                 .add(Attributes.MOVEMENT_SPEED, 0.3d)
-                .add(Attributes.ATTACK_DAMAGE, 3.0d);
+                .add(Attributes.ATTACK_DAMAGE, 2.0d);
     }
 
     @Override

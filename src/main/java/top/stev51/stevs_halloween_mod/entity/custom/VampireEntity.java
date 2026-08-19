@@ -20,9 +20,9 @@ public class VampireEntity extends BaseHalloweenMonster {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
-                .add(Attributes.MAX_HEALTH, 40)
+                .add(Attributes.MAX_HEALTH, 30)
                 .add(Attributes.MOVEMENT_SPEED, 0.35d)
-                .add(Attributes.ATTACK_DAMAGE, 6.0d);
+                .add(Attributes.ATTACK_DAMAGE, 3.5d);
     }
 
     @Override
