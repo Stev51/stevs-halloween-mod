@@ -23,7 +23,6 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> SPAWN_WEREWOLF = registerKey("spawn_werewolf");
     public static final ResourceKey<BiomeModifier> SPAWN_FRANKENSTEIN = registerKey("spawn_frankenstein");
     public static final ResourceKey<BiomeModifier> SPAWN_MUMMY = registerKey("spawn_mummy");
-    public static final ResourceKey<BiomeModifier> SPAWN_DEVIL = registerKey("spawn_devil");
 
     public static final ResourceKey<BiomeModifier> SPAWN_DEVIL_BASALT_DELTAS = registerKey("spawn_devil_basalt_deltas");
     public static final ResourceKey<BiomeModifier> SPAWN_DEVIL_CRIMSON_FOREST = registerKey("spawn_devil_crimson_forest");
@@ -36,7 +35,7 @@ public class ModBiomeModifiers {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
 
-        HolderSet<Biome> biomes_set = HolderSet.direct(
+        HolderSet<Biome> default_biomes_set = HolderSet.direct(
                 biomes.getOrThrow(Biomes.BADLANDS),
                 biomes.getOrThrow(Biomes.BAMBOO_JUNGLE),
                 biomes.getOrThrow(Biomes.BEACH),
@@ -89,34 +88,36 @@ public class ModBiomeModifiers {
                 biomes.getOrThrow(Biomes.WOODED_BADLANDS)
         );
 
+        HolderSet<Biome> mummy_biomes_set = HolderSet.direct(
+                biomes.getOrThrow(Biomes.BADLANDS),
+                biomes.getOrThrow(Biomes.DESERT),
+                biomes.getOrThrow(Biomes.ERODED_BADLANDS),
+                biomes.getOrThrow(Biomes.WOODED_BADLANDS)
+        );
+
         context.register(SPAWN_GHOST, new BiomeModifiers
-                .AddSpawnsBiomeModifier(biomes_set, List.of(
+                .AddSpawnsBiomeModifier(default_biomes_set, List.of(
                         new MobSpawnSettings.SpawnerData(ModEntities.GHOST.get(), 80, 2, 4)))
         );
 
         context.register(SPAWN_VAMPIRE, new BiomeModifiers
-                .AddSpawnsBiomeModifier(biomes_set, List.of(
+                .AddSpawnsBiomeModifier(default_biomes_set, List.of(
                         new MobSpawnSettings.SpawnerData(ModEntities.VAMPIRE.get(), 50, 1, 1)))
         );
 
         context.register(SPAWN_WEREWOLF, new BiomeModifiers
-                .AddSpawnsBiomeModifier(biomes_set, List.of(
+                .AddSpawnsBiomeModifier(default_biomes_set, List.of(
                         new MobSpawnSettings.SpawnerData(ModEntities.WEREWOLF.get(), 80, 2, 4)))
         );
 
         context.register(SPAWN_FRANKENSTEIN, new BiomeModifiers
-                .AddSpawnsBiomeModifier(biomes_set, List.of(
+                .AddSpawnsBiomeModifier(default_biomes_set, List.of(
                         new MobSpawnSettings.SpawnerData(ModEntities.FRANKENSTEIN.get(), 50, 1, 1)))
         );
 
         context.register(SPAWN_MUMMY, new BiomeModifiers
-                .AddSpawnsBiomeModifier(biomes_set, List.of(
-                        new MobSpawnSettings.SpawnerData(ModEntities.MUMMY.get(), 80, 2, 4)))
-        );
-
-        context.register(SPAWN_DEVIL, new BiomeModifiers
-                .AddSpawnsBiomeModifier(biomes_set, List.of(
-                        new MobSpawnSettings.SpawnerData(ModEntities.DEVIL.get(), 60, 3, 5)))
+                .AddSpawnsBiomeModifier(mummy_biomes_set, List.of(
+                        new MobSpawnSettings.SpawnerData(ModEntities.MUMMY.get(), 90, 4, 4)))
         );
 
         context.register(SPAWN_DEVIL_BASALT_DELTAS, new BiomeModifiers

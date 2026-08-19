@@ -1,5 +1,7 @@
 NEXT UPDATE CHANGELOG:
 - Nerfed almost every mob to be easier
+- Devils now only spawn in the Nether, no longer in the Overworld
+- Mummies now only spawn in deserts and badlands variants instead of all Overworld biomes
 - New food item: Bag of Candy, crafted with any 9 candy items
 - Candy food items now have the #candy tag
 - Changed all mobs to use custom sound events instead of vanilla sound events, and gave every mob sound a custom subtitle
@@ -8,7 +10,7 @@ NEXT UPDATE CHANGELOG:
 - Added a few new splash texts
 
 SOON:
-- Biome specific mob spawns
+- 
 
 LATER:
 - Crops
