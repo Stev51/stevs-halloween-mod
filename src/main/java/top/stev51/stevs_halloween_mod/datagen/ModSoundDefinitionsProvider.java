@@ -162,9 +162,13 @@ public class ModSoundDefinitionsProvider extends SoundDefinitionsProvider {
         add(ModSoundEvents.WEREWOLF_HOWL, SoundDefinition.definition()
                 .with(
                         sound("stevs_halloween_mod:mob/werewolf/howl1")
+                                .weight(1)
                                 .volume(0.5f),
                         sound("stevs_halloween_mod:mob/werewolf/howl2")
-                                .volume(0.5f)
+                                .weight(1)
+                                .volume(0.5f),
+                        sound("stevs_halloween_mod:mob/werewolf/silence")
+                                .weight(2)
                 )
                 .subtitle("subtitles.stevs_halloween_mod.entity.werewolf.howl")
         );
